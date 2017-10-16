@@ -1,3 +1,13 @@
+@keyframes dropDown {
+       0%   {top:-500px;}
+       60% {top: 0px;}
+       80% {top: 20px}
+      100% {top:0px;}
+}
+@keyframes hideWrapper {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -5,40 +15,61 @@
   grid-auto-rows: minmax(100px, auto);
   margin: 2%;
   color: white;
+  animation: hideWrapper 1s ease;
 }
-.one {
+.Skills {
   grid-column: 1 / 2;
   grid-row: 1;
-  background: lime;
   text-align: center;
   padding: 10%;
+  background-image: url("../img/skillsPic.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  animation: dropDown .7s linear;
+
 }
-.two {
+.aboutMe {
   grid-column: 2 / 4;
   grid-row: 1 / 3;
-  background: green;
   text-align: center;
   padding: 10%;
+  background-image: url("../img/aboutmePic.jpeg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  animation: dropDown .7s linear;
 }
-.three {
+.projects {
   grid-column: 1;
   grid-row: 2 / 5;
-  background: blue;
   text-align: center;
   padding: 10%;
-  background-image: ;
+  background-image: url("../img/projectsPic.jpeg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  animation: dropDown .6s linear;
 }
-.four {
+.contact {
   grid-column: 2;
   grid-row: 3 / 5;
-  background: orange;
   text-align: center;
   padding: 10%;
+  background-image: url("../img/contactPic.jpeg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  animation: dropDown .5s linear;
 }
-.five {
+.links {
   grid-column: 3;
   grid-row: 3  / 5;
-  background: red;
   text-align: center;
   padding: 10%;
+  background-image: url("../img/projectsPic.jpeg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  animation: dropDown .4s linear;
 }

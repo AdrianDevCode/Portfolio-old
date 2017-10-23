@@ -1,0 +1,39 @@
+p {
+  text-align: center;
+  color: red;
+}
+#homePage{
+  background: url("../img/wallPic.jpg") center center no-repeat;
+  width:100%;
+  height:100vh; /* fill out all viewport */
+  margin:0;
+  text-align: center;
+  background-size: cover;
+}
+#aboutMe{
+  background: url("../img/wallPic.jpg") center center no-repeat;
+  height:50vh;
+  margin:0;
+  background-size: cover;
+}
+#skills{
+  background: url("../img/wallPic.jpg") center center no-repeat;
+  width:100%;
+  height:40vh;
+  margin:0;
+  background-size: cover;
+}
+#projects{
+  background: url("../img/wallPic.jpg") center center no-repeat;
+  width:100%;
+  height:100%;
+  margin:0;
+  background-size: cover;
+}
+#contact{
+  background: url("../img/wallPic.jpg") center center no-repeat;
+  width:100%;
+  height:100%;
+  margin:0;
+  background-size: cover;
+}

@@ -1,27 +1,140 @@
-p {
+/* ANIMATE NAVBAR X HAMBURGER START */
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: 0;
+}
+
+.navbar-toggler span {
+   display: block;
+   background-color: #444;
+   height: 3px;
+   width: 25px;
+   margin-top: 4px;
+   margin-bottom: 4px;
+   -webkit-transform: rotate(0deg);
+   -moz-transform: rotate(0deg);
+   -o-transform: rotate(0deg);
+   transform: rotate(0deg);
+   position: relative;
+   left: 0;
+   opacity: 1;
+}
+
+.navbar-toggler span:nth-child(1),
+.navbar-toggler span:nth-child(3) {
+   -webkit-transition: transform .35s ease-in-out;
+   -moz-transition: transform .35s ease-in-out;
+   -o-transition: transform .35s ease-in-out;
+   transition: transform .35s ease-in-out;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+    opacity: 0.9;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    height: 12px;
+    visibility: hidden;
+    background-color: transparent;
+}
+
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    opacity: 0.9;
+}
+/* ANIMATE NAVBAR X HAMBURGER END */
+.navbar-toggler {
+  cursor: pointer;
+  background-color: #b11a21;
+}
+.navbar-toggler span {
+  background-color: #f1f0ee;
+}
+@keyframes bounce {
+	0%,10%,20%,50%,80%,100%{transform:translateY(0)}
+	40%{transform:translateY(-15px)}
+	60%{transform:translateY(-15px)}
+}
+@keyframes float{
+	0%{transform: translateY(0)}
+	50%{transform: translateY(-6px)}
+	100%{transform: translateY(0)}
+}
+.arrow-bounce {
+  animation: bounce 2s ease infinite;
+}
+.nav-link {
+  cursor: pointer;
+}
+h1 {
+  margin-top: 30vh;
   text-align: center;
   color: #f1f0ee;
+  font-family: 'Cinzel', serif;
+
 }
-#homePage{
-  background: url("../img/wallPic.jpg") center center no-repeat;
-  width:100%;
-  margin:0;
-  background-size: cover;
+h4 {
+  text-align: center;
+  color: #f1f0ee;
+  font-family: 'Cinzel', serif;
 }
-#homePage div {
-  height: 100vh;
+h6 {
+  color: #f1f0ee;
+  font-family: 'Cinzel', serif;
+  cursor: pointer;
+}
+p {
 text-align: center;
+  color: #f1f0ee;
+}
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+#homePage {
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+}
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #393939;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }
 #downArrowBtn {
-  color: red;
-  position: absolute;
+  color: #f1f0ee;
+  background: none;
+  border: none;
+  outline: none;
+position: absolute;
   bottom: 0;
+  display: block;
+  width: 100px;
 }
-#navBar {
-  
+#downArrowBtn:hover{
+  color: #b11a21;
 }
 #aboutMe{
-  background-color: #262626;
+  background-color: #b11a21;
+  width: 100%;
   height:100vh;
   margin:0;
   background-size: cover;

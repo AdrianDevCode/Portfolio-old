@@ -15,13 +15,14 @@ $(document).ready(function() {
     let scrollValue = $(window).scrollTop();
     if (scrollValue > 480) {
       $('.navbar').addClass('fixed-top').show(); // try to ease/smooth the animation
-    
+
     } else {
       $('.navbar').removeClass('fixed-top').hide();
 
     }
   });
 });
+/** settings for particles-js for the landing page**/
 particlesJS('particles-js',
 
 {

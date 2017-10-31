@@ -7,21 +7,298 @@ function scrollButtons(buttonClicked) {
 bootstrap 4 dropped .affix sadly. I could have used postion: sticky polyfills as well
 **/
 $(document).ready(function() {
+  var lastScrollTop = 600;
+  var $navbar = $('.navbar');
+  var navbarHeight = $navbar.outerHeight();
+  var movement = 0;
+  var lastDirection = 0;
 
-  $(window).on('scroll', function (event) {
 
-    $(".navbar").hide();
-    var prev = 0;
-    let scrollValue = $(window).scrollTop();
-    if (scrollValue > 480) {
-      $('.navbar').addClass('fixed-top').show(); // try to ease/smooth the animation
 
-    } else {
-      $('.navbar').removeClass('fixed-top').hide();
+  $(window).scroll(function(event){
+    var st = $(window).scrollTop();
+    movement += st - lastScrollTop;
+    $navbar.hide();
+    if (st > 550){
+      $navbar.addClass("fixed-top").show();
+  }
+    if (st > lastScrollTop) { // scroll down
+      if (lastDirection != 1) {
+        movement = 0;
+      }
+      var margin = Math.abs(movement);
+      if (margin > navbarHeight) {
+        margin = navbarHeight;
+      }
+      margin = -margin;
+      $navbar.css('margin-top', margin+"px")
 
+      lastDirection = 1;
+    } else { // scroll up
+      if (lastDirection != -1) {
+        movement = 0;
+      }
+      var margin = Math.abs(movement);
+      if (margin > navbarHeight) {
+        margin = navbarHeight;
+      }
+      margin = margin-navbarHeight;
+      $navbar.css('margin-top', margin+"px")
+
+      lastDirection = -1;
     }
+
+    lastScrollTop = st;
+
+    // console.log(margin);
   });
 });
+// Settings for google maps in contacts section
+let map;
+// my custom map look object, makes the map darker and less streets and landmarks
+      function initMap() {
+      var styledMapType = new google.maps.StyledMapType(
+         [
+          {
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#212121"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.icon",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "elementType": "labels.text.stroke",
+            "stylers": [
+              {
+                "color": "#212121"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative.country",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#9e9e9e"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative.land_parcel",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "administrative.locality",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#bdbdbd"
+              }
+            ]
+          },
+          {
+            "featureType": "poi",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#181818"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#616161"
+              }
+            ]
+          },
+          {
+            "featureType": "poi.park",
+            "elementType": "labels.text.stroke",
+            "stylers": [
+              {
+                "color": "#1b1b1b"
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "geometry.fill",
+            "stylers": [
+              {
+                "color": "#2c2c2c"
+              }
+            ]
+          },
+          {
+            "featureType": "road",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#8a8a8a"
+              }
+            ]
+          },
+          {
+            "featureType": "road.arterial",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "road.arterial",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#373737"
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#3c3c3c"
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway",
+            "elementType": "labels",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "road.highway.controlled_access",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#4e4e4e"
+              }
+            ]
+          },
+          {
+            "featureType": "road.local",
+            "stylers": [
+              {
+                "visibility": "off"
+              }
+            ]
+          },
+          {
+            "featureType": "road.local",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#616161"
+              }
+            ]
+          },
+          {
+            "featureType": "transit",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#757575"
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [
+              {
+                "color": "#000000"
+              }
+            ]
+          },
+          {
+            "featureType": "water",
+            "elementType": "labels.text.fill",
+            "stylers": [
+              {
+                "color": "#3d3d3d"
+              }
+            ]
+          }
+        ],
+        {name: 'styled Map'});
+
+        let smyrna = {lat: 33.8840, lng: -84.5144};
+        let posLeft = {lat: 33.8840, lng: -84.004816};
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: smyrna,
+          zoom: 10,
+          mapTypeControlOptions: {
+            mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
+                    'styled_map']
+          }
+        });
+
+        map.mapTypes.set('styled_map', styledMapType);
+       map.setMapTypeId('styled_map');
+       var homeIcon = {
+          path: google.maps.SymbolPath.BACKWARD_OPEN_ARROW,
+          scale: 5,
+          strokeColor: '#3175e2',
+        };
+
+    var marker = new google.maps.Marker({
+    position: smyrna,
+    icon: homeIcon,
+    draggable: true,
+    title: 'Smyrna, GA 30082',
+    map: map
+  });
+}
+
 /** settings for particles-js for the landing page**/
 particlesJS('particles-js',
 

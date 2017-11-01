@@ -411,12 +411,3 @@ particlesJS('particles-js',
   "retina_detect": true,
 
 });
-
-Email.send("adrianw.ct@gmail.com",
-"adrianw.ct@gmail.com",
-"This is a subject",
-"this is the body",
-"aspmx.l.google.com",
-"adrianw.ct@gmail.com",
-"Pirat1987");
-//{token: " 35a58515-0a0b-4a2a-b10f-ce9781161381"});

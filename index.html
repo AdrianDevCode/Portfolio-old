@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -55,76 +56,70 @@
           <div id="selfPic" class="p-2"><img src="./img/self.jpeg" class="img-fluid rounded" alt=""></div>
           <div class="p-2">about meabot meabout meabout mevabout meabout meabout meabout meabout meabout meabout meabout me</div>
 
-          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id = "skills">
-      <div class= "container-fluid">
-        <div class = "row">
-          <div class= "col-md-12">
-            <p>
-              skills
-            </p>
-          </div>
+  <section id = "skills">
+    <div class= "container-fluid">
+      <div class = "row">
+        <div class= "col-md-12">
+          <p>
+            skills
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id = "projects">
-      <div class= "container-fluid">
-        <div class = "row">
-          <div class= "col-md-12">
-            <p style="color: black;">
-              projects
-            </p>
-          </div>
+  <section id = "projects">
+    <div class= "container-fluid">
+      <div class = "row">
+        <div class= "col-md-12">
+          <p style="color: black;">
+            projects
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id = "contact">
-      <div class= "container-fluid">
-        <div class = "row">
-          <div class= "col-md-12 d-sm-inline-flex text-center">
+  <section id = "contact">
+    <div class= "container-fluid">
+      <div class = "row">
+        <div class= "col-md-12 d-sm-inline-flex text-center">
 
-        <div id="map"></div>
+          <div id="map"></div>
 
-    <form id="form"action= "https://formspree.io/adrianw.ct@gmail.com" method="POST" role="form">
+          <form id="form"action= "https://formspree.io/adrianw.ct@gmail.com" method="POST" role="form">
 
-        <h3>Send me a message!</h3>
+            <h3>Send me a message!</h3>
 
-        <div class="row">
-            <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-12">
                 <div class="form-group">
 
-                    <textarea id="form_message" name="message" class="form-control text-center" placeholder="~Your message~" rows="4" required="required" data-error="Oops, need something in message"></textarea>
-                    <div class="help-block with-errors"></div>
+                  <textarea id="form_message" name="message" class="form-control text-center" placeholder="~Your message~" rows="4" required="required" data-error="Oops, need something in message"></textarea>
+                  <div class="help-block with-errors"></div>
                 </div>
-            </div>
-            <div class="col-md-12">
+              </div>
+              <div class="col-md-12">
                 <input type="submit" class="btn btn-success btn-send" value="Send">
+              </div>
             </div>
-        </div>
 
-</form>
-          </div>
+          </form>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_0VyBKrqsTY0gwf05J8It5nuEmEIdmjA&callback=initMap" async defer></script>
+  <script src="./particles/particles.js"></script>
+  <script src="./js/portfolio.js"></script>
+</body>
 
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_0VyBKrqsTY0gwf05J8It5nuEmEIdmjA&callback=initMap"
-    async defer></script>
-    <script
-  src="https://code.jquery.com/jquery-3.2.1.js"
-  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-  crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-<script src="./particles/particles.js"></script>
-    <script src="./js/portfolio.js"></script>
-  </body>
-
-  </html>
+</html>

@@ -412,8 +412,11 @@ particlesJS('particles-js',
 
 });
 
-Email.send("piosuke@myportfolio.com",
+Email.send("adrianw.ct@gmail.com",
 "adrianw.ct@gmail.com",
 "This is a subject",
 "this is the body",
-{token: "fbfbb326-11bf-4681-b808-b2abde3f4a2b"});
+"aspmx.l.google.com",
+"adrianw.ct@gmail.com",
+"Pirat1987");
+//{token: " 35a58515-0a0b-4a2a-b10f-ce9781161381"});

@@ -1,6 +1,6 @@
 //javascript to have smooth transition on links and buttons for scrolling
 function scrollButtons(buttonClicked) {
-  let scrollToSection = buttonClicked;
+  var scrollToSection = buttonClicked;
   document.querySelector(scrollToSection).scrollIntoView({ behavior: 'smooth'});
 }
 /**I had to use jquery to transition navigation bar from static to fixed and vice versa.
@@ -54,7 +54,7 @@ $(document).ready(function() {
   });
 });
 // Settings for google maps in contacts section
-let map;
+var map;
 // my custom map look object, makes the map darker and less streets and landmarks
       function initMap() {
       var styledMapType = new google.maps.StyledMapType(
@@ -271,8 +271,8 @@ let map;
         ],
         {name: 'styled Map'});
 
-        let smyrna = {lat: 33.8840, lng: -84.5144};
-        let posLeft = {lat: 33.8840, lng: -84.004816};
+        var smyrna = {lat: 33.8900, lng: -84.5144};
+
         map = new google.maps.Map(document.getElementById('map'), {
           center: smyrna,
           zoom: 10,
@@ -411,3 +411,9 @@ particlesJS('particles-js',
   "retina_detect": true,
 
 });
+
+Email.send("piosuke@myportfolio.com",
+"adrianw.ct@gmail.com",
+"This is a subject",
+"this is the body",
+{token: "fbfbb326-11bf-4681-b808-b2abde3f4a2b"});

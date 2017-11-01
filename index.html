@@ -89,17 +89,57 @@
         <div class = "row">
           <div class= "col-md-12 d-sm-inline-flex text-center">
 
-            <div id="map"></div>
-            <div id="form">
+        <div id="map"></div>
 
-              <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
+    <form id="form" method="post" action="contact.php" role="form">
+
+    <div class="controls">
+        <h3>Send me a message!</h3>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+
+                    <input id="form_name" type="text" name="name" class="form-control d-sm-inline-flex text-center" placeholder="~Name~" required="required" data-error="Name is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
             </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+
+                    <input id="form_email" type="email" name="email" class="form-control d-sm-inline-flex text-center" placeholder="~Email~" required="required" data-error="Valid email is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+          </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+
+                    <textarea id="form_message" name="message" class="form-control text-center" placeholder="~Your message~" rows="4" required="required" data-error="Oops, need something in message"></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <input type="submit" onclick="Email.send(); return false" class="btn btn-success btn-send" value="Send message">
+
+            </div>
+        </div>
+
+    </div>
+
+</form>
+
           </div>
         </div>
       </div>
     </section>
 
-
+    <script src="https://smtpjs.com/smtp.js">
+    </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_0VyBKrqsTY0gwf05J8It5nuEmEIdmjA&callback=initMap"
     async defer></script>
     <script

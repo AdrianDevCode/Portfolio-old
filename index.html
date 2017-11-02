@@ -40,7 +40,6 @@
       <div class="collapse navbar-collapse" id="myBar">
         <ul class="navbar-nav">
           <li><a onClick="scrollButtons('#aboutMe')" class="nav-link">About Me <span class="sr-only"></span></a></li>
-          <li><a onClick="scrollButtons('#skills')" class="nav-link">Skills<span class="sr-only"></span></a></li>
           <li><a onClick="scrollButtons('#projects')" class="nav-link">Projects <span class="sr-only"></span></a></li>
           <li><a onClick="scrollButtons('#contact')" class="nav-link">Contact <span class="sr-only"></span></a></li>
         </ul>
@@ -48,41 +47,83 @@
     </nav>
   </section>
 
-  <section id = "aboutMe">
-    <div class= "container">
-      <div class = "row">
-        <div class= "col-md-12 d-sm-inline-flex text-center">
+  <section id= "aboutMe" class="text-md-center">
 
-          <div id="selfPic" class="p-2"><img src="./img/self.jpeg" class="img-fluid rounded" alt=""></div>
-          <div class="p-2">about meabot meabout meabout mevabout meabout meabout meabout meabout meabout meabout meabout me</div>
+          <div class="card d-inline-flex">
+            <img class="card-img-top" src="./img/self.jpeg" alt="">
+            <div class="card-body">
+              <h4 class="card-title">builder of web</h4>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, necessitatibus!
+              </p>
 
-        </div>
-      </div>
+            </div>
+
     </div>
   </section>
 
-  <section id = "skills">
-    <div class= "container-fluid">
-      <div class = "row">
-        <div class= "col-md-12">
-          <p>
-            skills
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section id = "projects" class="text-md-center">
 
-  <section id = "projects">
-    <div class= "container-fluid">
-      <div class = "row">
-        <div class= "col-md-12">
-          <p style="color: black;">
-            projects
-          </p>
-        </div>
-      </div>
-    </div>
+
+          <div class="card d-inline-flex">
+            <img class="card-img-top" src="./img/wallPic.jpg" style="height: 300px;"alt="">
+            <div class="card-body">
+              <h4 class="card-title">project 1</h4>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, necessitatibus!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum assumenda a minus aliquid iure quo accusamus debitis, laudantium odio atque.
+              </p>
+
+            </div>
+          </div>
+          <div class="card d-inline-flex">
+            <img class="card-img-top" src="./img/wallPic.jpg" style="height: 300px;"alt="">
+            <div class="card-body">
+              <h4 class="card-title">project 2</h4>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, necessitatibus!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum assumenda a minus aliquid iure quo accusamus debitis, laudantium odio atque.
+              </p>
+
+            </div>
+          </div>
+          <div class="card d-inline-flex">
+            <img class="card-img-top" src="./img/wallPic.jpg" style="height: 300px;"alt="">
+            <div class="card-body">
+              <h4 class="card-title">project 3</h4>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, necessitatibus!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum assumenda a minus aliquid iure quo accusamus debitis, laudantium odio atque.
+              </p>
+
+            </div>
+          </div>
+          <div class="card d-inline-flex">
+            <img class="card-img-top" src="./img/wallPic.jpg" style="height: 300px;"alt="">
+            <div class="card-body">
+              <h4 class="card-title">project 4</h4>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, necessitatibus!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum assumenda a minus aliquid iure quo accusamus debitis, laudantium odio atque.
+              </p>
+
+            </div>
+          </div>
+          <div class="card d-inline-flex">
+            <img class="card-img-top" src="./img/wallPic.jpg" style="height: 300px;"alt="">
+            <div class="card-body">
+              <h4 class="card-title">project 5</h4>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, necessitatibus!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum assumenda a minus aliquid iure quo accusamus debitis, laudantium odio atque.
+              </p>
+
+            </div>
+          </div>
+
+          </div>
+
+
   </section>
 
   <section id = "contact">
@@ -100,7 +141,7 @@
               <div class="col-md-12">
                 <div class="form-group">
 
-                  <textarea id="form_message" name="message" class="form-control text-center" placeholder="~Your message~" rows="4" required="required" data-error="Oops, need something in message"></textarea>
+                  <textarea id="form_message" name="message" class="form-control text-center" rows="4" required="required" data-error="Oops, need something in message"></textarea>
                   <div class="help-block with-errors"></div>
                 </div>
               </div>

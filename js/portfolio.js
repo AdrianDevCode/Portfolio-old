@@ -1,7 +1,14 @@
 /**I had to use jquery to transition navigation bar from static to fixed and vice versa.
-bootstrap 4 dropped .affix sadly. I could have used postion: sticky polyfills as well
+bootstrap 4 dropped .affix sadly.
 **/
 $(document).ready(function() {
+
+// variables for scroll function
+  var $navbar = $('.navbar');
+  var lastScrollTop = 600;
+  var navbarHeight = $navbar.outerHeight();
+  var movement = 0;
+  var lastDirection = 0;
 
   $('a[href^="#"]').on('click', function(event) {
     var target = $(this.getAttribute('href'));
@@ -12,14 +19,7 @@ $(document).ready(function() {
         }, 1000);
     }
 });
-  var lastScrollTop = 600;
-  var $navbar = $('.navbar');
-  var navbarHeight = $navbar.outerHeight();
-  var movement = 0;
-  var lastDirection = 0;
-
-
-
+//scroll function to hide navbar when scroll down and show when scroll  up
   $(window).scroll(function(event){
     var st = $(window).scrollTop();
     movement += st - lastScrollTop;
@@ -57,6 +57,7 @@ $(document).ready(function() {
 
     // console.log(margin);
   });
+
 });
 // Settings for google maps in contacts section
 var map;

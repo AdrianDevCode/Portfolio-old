@@ -130,17 +130,6 @@ canvas {
   background-size: cover;
   background-position: 50% 50%;
 }
-.fade-in {
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 1s linear;
-}
-
-.fade-out {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s 1s, opacity 1s linear;
-}
 #downArrowBtn {
   color: #f1f0ee;
   background: none;

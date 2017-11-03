@@ -1,12 +1,17 @@
-//javascript to have smooth transition on links and buttons for scrolling
-function scrollButtons(buttonClicked) {
-  var scrollToSection = buttonClicked;
-  document.querySelector(scrollToSection).scrollIntoView({ behavior: 'smooth'});
-}
 /**I had to use jquery to transition navigation bar from static to fixed and vice versa.
 bootstrap 4 dropped .affix sadly. I could have used postion: sticky polyfills as well
 **/
 $(document).ready(function() {
+
+  $('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+});
   var lastScrollTop = 600;
   var $navbar = $('.navbar');
   var navbarHeight = $navbar.outerHeight();

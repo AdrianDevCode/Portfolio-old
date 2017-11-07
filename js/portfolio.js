@@ -2,16 +2,30 @@
 bootstrap 4 dropped .affix sadly.
 **/
 $(document).ready(function() {
+// responsive toggle to hide in mobile and stay up on bigger screens
+  var view = $(window).width();
 
-// variables for scroll function
-  var $navbar = $('.navbar');
-  var lastScrollTop = 600;
-  var navbarHeight = $navbar.outerHeight();
-  var movement = 0;
-  var lastDirection = 0;
+  if (view <= 765) {
+    $(".nav-link").attr("data-toggle", "collapse");
+  }
+  else {
+    $(".nav-link").removeAttr("data-toggle", "collapse");
+  }
+// if resize window from small to bigger or vice versa, toggle navbar
+  $(window).resize(function(){
+    view = $(window).width();
 
+    if (view <= 765) {
+      $(".nav-link").attr("data-toggle", "collapse");
+    }
+    else {
+      $(".nav-link").removeAttr("data-toggle", "collapse");
+    }
+  });
+// smooth scroll with link clicks
   $('a[href^="#"]').on('click', function(event) {
     var target = $(this.getAttribute('href'));
+
     if( target.length ) {
         event.preventDefault();
         $('html, body').stop().animate({
@@ -20,43 +34,6 @@ $(document).ready(function() {
     }
 });
 //scroll function to hide navbar when scroll down and show when scroll  up
-  $(window).scroll(function(event){
-    var st = $(window).scrollTop();
-    movement += st - lastScrollTop;
-    $navbar.hide();
-    if (st > 550){
-      $navbar.addClass("fixed-top").show();
-  }
-    if (st > lastScrollTop) { // scroll down
-      if (lastDirection != 1) {
-        movement = 0;
-      }
-      var margin = Math.abs(movement);
-      if (margin > navbarHeight) {
-        margin = navbarHeight;
-      }
-      margin = -margin;
-      $navbar.css('margin-top', margin+"px")
-
-      lastDirection = 1;
-    } else { // scroll up
-      if (lastDirection != -1) {
-        movement = 0;
-      }
-      var margin = Math.abs(movement);
-      if (margin > navbarHeight) {
-        margin = navbarHeight;
-      }
-      margin = margin-navbarHeight;
-      $navbar.css('margin-top', margin+"px")
-
-      lastDirection = -1;
-    }
-
-    lastScrollTop = st;
-
-    // console.log(margin);
-  });
 
 });
 // Settings for google maps in contacts section

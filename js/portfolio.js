@@ -2,6 +2,7 @@
 bootstrap 4 dropped .affix sadly.
 **/
 $(document).ready(function() {
+  $('.popOver').popover({ trigger: "hover" });
 // responsive toggle to hide in mobile and stay up on bigger screens
   var view = $(window).width();
 

@@ -76,9 +76,8 @@
 .arrow-bounce {
   animation: bounce 2s ease infinite;
 }
-.nav-link {
-  cursor: pointer;
-  text-align: center;
+.navIcons:hover {
+  animation: float 1s ease infinite;
 }
 h1 {
   margin-top: 30vh;
@@ -145,6 +144,9 @@ display: inline-block;
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+}
+.navbar .navbar-collapse {
+    text-align: center;
 }
 #projects div {
   display: inline-block;

@@ -25,7 +25,7 @@
         </div>
       </div>
     </div>
-    <div class="mx-auto" style="width: 100px;">
+    <div class="mx-auto" style="width: 60px;">
       <a id="downArrowBtn" href="#aboutMe"><i class="fa fa-angle-double-down fa-5x arrow-bounce" aria-hidden="true"></i></a>
     </div>
   </section>
@@ -45,16 +45,16 @@
           <li><a data-target="#myBar" class="nav-link" href="#contact">Contact<span class="sr-only"></span></a></li>
         </ul>
         <ul class="navbar-nav ml-auto">
-          <li><a data-target="#myBar" class="nav-link navIcons" href="./resume.pdf"><i class="fa fa-file-pdf-o fa-2x" aria-hidden="true"></i><span class="sr-only"></span></a></li>
-          <li><a data-target="#myBar" class="nav-link navIcons" href="https://github.com/AdrianDevCode"><i class="fa fa-github fa-2x" aria-hidden="true"></i><span class="sr-only"></span></a></li>
-          <li><a data-target="#myBar" class="nav-link navIcons" href="https://linkedin.com/in/adriandevcode"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i><span class="sr-only"></span></a></li>
+          <li><a data-content="resume" rel="popover" data-placement="bottom" data-target="#myBar" class="popOver nav-link navIcons" href="./resume.pdf"><i class="fa fa-file-pdf-o fa-2x" aria-hidden="true"></i><span class="sr-only"></span></a></li>
+          <li><a data-content="gitHub" rel="popover" data-placement="bottom" data-target="#myBar" class="popOver nav-link navIcons" href="https://github.com/AdrianDevCode"><i class="fa fa-github fa-2x" aria-hidden="true"></i><span class="sr-only"></span></a></li>
+          <li><a data-content="LinkedIn" rel="popover" data-placement="bottom" data-target="#myBar" class="popOver nav-link navIcons" href="https://linkedin.com/in/adriandevcode"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i><span class="sr-only"></span></a></li>
         </ul>
 
       </div>
     </nav>
   </section>
 <!-- ABOUT ME SECTION-->
-  <section id="aboutMe" class="text-md-center d-flex justify-content-center">
+  <section id="aboutMe" class="container-fluid text-sm-center">
 
           <div class="card d-inline-flex">
             <img class="card-img-top" src="./img/self.jpeg">
@@ -67,19 +67,18 @@
     </div>
   </section>
 <!-- PROJECT SECTION-->
-  <section id="projects" class="text-md-center">
+  <section id="projects" class="text-sm-center container-fluid">
 
-          <div class="card d-inline-flex">
+          <div class="card">
             <a href="https://codepen.io/AdrianDevCode/full/dXGWZd" class="card-link"><img class="card-img-top" src="./img/quoteMachine.png">
             <div class="card-body">
               <h4 class="card-title">Quote Machine</h4>
               <p class="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, necessitatibus!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum assumenda a minus aliquid iure quo accusamus debitis, laudantium odio atque.
+                A simple web app that pulls random quotes from a list file with an option to post it on your twitter.
               </p>
             </div></a>
           </div>
-          <div class="card d-inline-flex">
+          <div class="card">
             <a href="https://codepen.io/AdrianDevCode/full/dXGWZd" class="card-link"><img class="card-img-top" src="./img/wallPic.jpg"></a>
             <div class="card-body">
               <h4 class="card-title">project 2</h4>
@@ -87,10 +86,9 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, necessitatibus!
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum assumenda a minus aliquid iure quo accusamus debitis, laudantium odio atque.
               </p>
-
             </div>
           </div>
-          <div class="card d-inline-flex">
+          <div class="card">
             <a href="https://codepen.io/AdrianDevCode/full/dXGWZd" class="card-link"><img class="card-img-top" src="./img/wallPic.jpg"></a>
             <div class="card-body">
               <h4 class="card-title">project 3</h4>
@@ -101,7 +99,7 @@
 
             </div>
           </div>
-          <div class="card d-inline-flex">
+          <div class="card">
             <a href="https://codepen.io/AdrianDevCode/full/dXGWZd" class="card-link"><img class="card-img-top" src="./img/wallPic.jpg"></a>
             <div class="card-body">
               <h4 class="card-title">project 4</h4>
@@ -112,7 +110,7 @@
 
             </div>
           </div>
-          <div class="card d-inline-flex">
+          <div class="card">
             <a href="https://codepen.io/AdrianDevCode/full/dXGWZd" class="card-link"><img class="card-img-top" src="./img/wallPic.jpg"></a>
             <div class="card-body">
               <h4 class="card-title">project 5</h4>
@@ -143,7 +141,7 @@
                 </div>
               </div>
               <div class="col-md-12">
-                <input type="submit" class="btn btn-success btn-send" value="Send">
+                <button type="submit" class="sendButton">Send</button>
               </div>
             </div>
           </form>
@@ -151,6 +149,9 @@
       </div>
     </div>
   </section>
+  <footer>
+    <strong><i class="fa fa-copyright" aria-hidden="true"></i> copyright 2017</strong>
+  </footer>
   <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>

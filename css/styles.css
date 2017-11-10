@@ -107,10 +107,20 @@ canvas {
   display: block;
   vertical-align: bottom;
 }
+.quotes {
+  color: black;
+}
+.text p {
+  color: black;
+  text-align: center;
+}
+.text {
+  margin-top: 15%;
+}
 .card {
   width: 300px;
   min-height: 600px;
-  margin: 3%;
+  margin: 2%;
 }
 .card-img-top{
   height: 300px;
@@ -151,14 +161,14 @@ canvas {
 .navbar .navbar-collapse {
     text-align: center;
 }
-#projects div {
+#projects .card {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
 }
-#projects div:hover, #projects div:focus, #projects div:active {
+#projects .card:hover, #projects .card:focus, #projects .card:active {
   -webkit-animation-name: hvr-wobble-vertical;
   animation-name: hvr-wobble-vertical;
   -webkit-animation-duration: 1s;
@@ -229,6 +239,10 @@ canvas {
   background-size: cover;
   background-position: 50% 50%;
 }
+.popover {
+  background: #393939;
+  color: white;
+}
 #downArrowBtn {
   color: #f1f0ee;
   background: none;
@@ -247,22 +261,22 @@ canvas {
 }
 #aboutMe, #contact{
   background-color: #d9d9d9;
-  max-width: 100%;
+  width: 100%;
   min-height: 100vh;
-  padding-top: 5%;
+  padding: 5%;
   background-size: cover;
 }
 #projects {
   background-color: #393939;
-  max-width: 100%;
+  width: 100%;
   min-height:100vh;
-  padding-top: 5%;
+  padding: 5%;
   background-size: cover;
 }
 #map, #form {
   height: 50vh;
   width: 100%;
-  padding: 2%;
+  padding: 5%;
   margin: 70px auto;
   color: white;
 }

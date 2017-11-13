@@ -82,42 +82,64 @@
 h1 {
   margin-top: 30vh;
   text-align: center;
-  color: #f1f0ee;
+  color: #66fcf1; /* teal color*/
   font-family: 'Cinzel', serif;
 }
 h3 {
   font-family: 'Cinzel', serif;
-  color: black;
+  color: #66fcf1;
 }
 h4 {
   text-align: center;
-  color: #f1f0ee;
+  color: #66fcf1;
   font-family: 'Cinzel', serif;
 }
 h6 {
-  color: #f1f0ee;
+  color: #66fcf1;
   font-family: 'Cinzel', serif;
   cursor: pointer;
 }
 p {
   text-align: center;
-  color: #f1f0ee;
+  color: white;
 }
 canvas {
   display: block;
   vertical-align: bottom;
 }
+.blockquote-footer {
+  color: #66fcf1;
+}
+.quotes {
+  color: white;
+}
+.divider {
+  background: #474b4f;
+  height: 1px;
+}
+.text p {
+  color: white;
+  text-align: center;
+}
+.text {
+  margin-top: 15%;
+}
 .card {
   width: 300px;
   min-height: 600px;
-  margin: 3%;
+  margin: 2%;
+  background: #474b4f;
+
 }
 .card-img-top{
   height: 300px;
   width: 298px;
 }
-.card-title, .card-text{
-  color: black;
+.card-title {
+  color: #66fcf1;
+  padding: 3%;
+}
+.card-text {
   padding: 3%;
 }
 /* Wobble the project cards */
@@ -151,14 +173,14 @@ canvas {
 .navbar .navbar-collapse {
     text-align: center;
 }
-#projects div {
+#projects .card {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px transparent;
 }
-#projects div:hover, #projects div:focus, #projects div:active {
+#projects .card:hover, #projects .card:focus, #projects .card:active {
   -webkit-animation-name: hvr-wobble-vertical;
   animation-name: hvr-wobble-vertical;
   -webkit-animation-duration: 1s;
@@ -178,9 +200,9 @@ canvas {
   box-shadow: 0 0 1px transparent;
   position: relative;
   border: none;
-  background-color: #393939;
+  background-color: #66fcf1;
   padding: 10px 50px;
-  color: white;
+  color: black;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.2s;
@@ -194,7 +216,7 @@ canvas {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #3175e2;
+  background: #474b4f;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 50%;
@@ -207,7 +229,7 @@ canvas {
   transition-timing-function: ease-out;
 }
 .sendButton:hover, .sendButton:focus, .sendButton:active {
-  color: white;
+  color: black;
 }
 .sendButton:hover:before, .sendButton:focus:before, .sendButton:active:before {
   -webkit-transform: scaleX(1);
@@ -219,18 +241,25 @@ canvas {
   width: 100%;
   margin: 0 auto;
 }
-#particles-js {
+#navBar {
+  display: none;
+}
+#particles-js, #particles-js2, #particles-js3, #particles-js4 {
   position: absolute;
   width: 100%;
   height: 100vh;
-  background-color: #393939;
+  background-color: #0b0c10; /* black color*/
   background-image: url("");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
 }
+.popover {
+  background: #474b4f;
+  color: #66fcf1;
+}
 #downArrowBtn {
-  color: #f1f0ee;
+  color: #66fcf1;
   background: none;
   border: none;
   outline: none;
@@ -240,33 +269,35 @@ canvas {
   width: 100px;
 }
 #downArrowBtn:hover{
-  color: #3175e2;
+  color: white;
 }
 #navBar {
   opacity: 0.90;
 }
 #aboutMe, #contact{
-  background-color: #d9d9d9;
-  max-width: 100%;
+  background: none;
+  width: 100%;
   min-height: 100vh;
-  padding-top: 5%;
+  padding: 5%;
   background-size: cover;
 }
 #projects {
-  background-color: #393939;
-  max-width: 100%;
+  background: #0b0c10;
+  width: 100%;
   min-height:100vh;
-  padding-top: 5%;
+  padding: 5%;
   background-size: cover;
 }
 #map, #form {
   height: 50vh;
   width: 100%;
-  padding: 2%;
+  padding: 5%;
   margin: 70px auto;
-  color: white;
+
 }
 footer {
   text-align: center;
   font-family: 'Cinzel', serif;
+  color: #66fcf1;
+  background: #474b4f;
 }

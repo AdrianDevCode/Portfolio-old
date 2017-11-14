@@ -3,39 +3,6 @@ bootstrap 4 dropped .affix sadly.
 **/
 $(document).ready(function() {
   $('.popOver').popover({ trigger: "hover" });
-  // responsive toggle to hide in mobile and stay up on bigger screens
-  var view = $(window).width();
-  var $nav = $('#navBar');
-  var scrollHeight = $(window).height();
-  $(function () {
-          $(window).scroll(function () {
-
-              if ($(this).scrollTop() > scrollHeight - 1 ) {
-
-                  $nav.attr("display","block").fadeIn();
-              } else {
-                  $nav.attr("display","none").fadeOut();
-              }
-          });
-      });
-
-  if (view <= 765) {
-    $(".nav-link").attr("data-toggle", "collapse");
-  }
-  else {
-    $(".nav-link").removeAttr("data-toggle", "collapse");
-  }
-  // if you resize window from small to bigger or vice versa, toggle navbar
-  $(window).resize(function(){
-    view = $(window).width();
-
-    if (view <= 765) {
-      $(".nav-link").attr("data-toggle", "collapse");
-    }
-    else {
-      $(".nav-link").removeAttr("data-toggle", "collapse");
-    }
-  });
   // smooth scroll with link clicks
   $('a[href^="#"]').on('click', function(event) {
     var target = $(this.getAttribute('href'));
@@ -47,7 +14,43 @@ $(document).ready(function() {
       }, 1300);
     }
   });
-  //scroll function to hide navbar when scroll down and show when scroll  up
+  // responsive toggle to hide in mobile and stay up on bigger screens
+  var view = $(window).width();
+  var $nav = $('#navBar');
+  var scrollHeight = $(window).height();
+  $(function () {
+          $(window).scroll(function () {
+
+              if ($(this).scrollTop() > scrollHeight - 1 ) {
+
+                  $nav.addClass("fixed");
+              } else {
+                  $nav.removeClass("fixed");
+              }
+          });
+      });
+
+  if (view <= 765) {
+    $(".nav-link").attr("data-toggle", "collapse");
+
+  }
+  else {
+    $(".nav-link").removeAttr("data-toggle", "collapse");
+
+  }
+  // if you resize window from small to bigger or vice versa, toggle navbar
+  $(window).resize(function(){
+    view = $(window).width();
+
+    if (view <= 765) {
+      $(".nav-link").attr("data-toggle", "collapse");
+
+    }
+    else {
+      $(".nav-link").removeAttr("data-toggle", "collapse");
+
+    }
+  });
 
 });
 // Settings for google maps in contacts section
@@ -375,340 +378,7 @@ function initMap() {
           "mode": "repulse"
         },
         "onclick": {
-          "enable": true,
-          "mode": "push"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 200,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "bubble": {
-          "distance": 400,
-          "size": 10,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 3
-        },
-        "repulse": {
-          "distance": 100
-        },
-        "push": {
-          "particles_nb": 4
-        },
-        "remove": {
-          "particles_nb": 2
-        }
-      }
-    },
-    "retina_detect": true,
-
-  });
-  particlesJS('particles-js2',
-
-  {
-    "particles": {
-      "number": {
-        "value": 30,
-        "density": {
-          "enable": true,
-          "value_area": 700
-        }
-      },
-      "color": {
-        "value": "#66fcf1"
-      },
-      "shape": {
-        "type": "polygon",
-        "stroke": {
-          "width": 0,
-          "color": "white"
-        },
-        "polygon": {
-          "nb_sides": 7
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
-      },
-      "opacity": {
-        "value": 1,
-        "random": false,
-        "anim": {
-          "enable": true,
-          "speed": 1,
-          "opacity_min": 0.1,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 3,
-        "random": true,
-        "anim": {
           "enable": false,
-          "speed": 40,
-          "size_min": 0.1,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 200,
-        "color": "#ffffff",
-        "opacity": 0.6,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 3,
-        "direction": "none",
-        "random": false,
-        "straight": false,
-        "out_mode": "out",
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
-    },
-    "interactivity": {
-      "detect_on": "window",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "repulse"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 200,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "bubble": {
-          "distance": 400,
-          "size": 10,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 3
-        },
-        "repulse": {
-          "distance": 100
-        },
-        "push": {
-          "particles_nb": 4
-        },
-        "remove": {
-          "particles_nb": 2
-        }
-      }
-    },
-    "retina_detect": true,
-
-  });
-  particlesJS('particles-js3',
-
-  {
-    "particles": {
-      "number": {
-        "value": 30,
-        "density": {
-          "enable": true,
-          "value_area": 700
-        }
-      },
-      "color": {
-        "value": "#66fcf1"
-      },
-      "shape": {
-        "type": "polygon",
-        "stroke": {
-          "width": 0,
-          "color": "white"
-        },
-        "polygon": {
-          "nb_sides": 7
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
-      },
-      "opacity": {
-        "value": 1,
-        "random": false,
-        "anim": {
-          "enable": true,
-          "speed": 1,
-          "opacity_min": 0.1,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 3,
-        "random": true,
-        "anim": {
-          "enable": false,
-          "speed": 40,
-          "size_min": 0.1,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 200,
-        "color": "#ffffff",
-        "opacity": 0.6,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 3,
-        "direction": "none",
-        "random": false,
-        "straight": false,
-        "out_mode": "out",
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
-    },
-    "interactivity": {
-      "detect_on": "window",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "repulse"
-        },
-        "onclick": {
-          "enable": true,
-          "mode": "push"
-        },
-        "resize": true
-      },
-      "modes": {
-        "grab": {
-          "distance": 200,
-          "line_linked": {
-            "opacity": 1
-          }
-        },
-        "bubble": {
-          "distance": 400,
-          "size": 10,
-          "duration": 2,
-          "opacity": 8,
-          "speed": 3
-        },
-        "repulse": {
-          "distance": 100
-        },
-        "push": {
-          "particles_nb": 4
-        },
-        "remove": {
-          "particles_nb": 2
-        }
-      }
-    },
-    "retina_detect": true,
-
-  });
-  particlesJS('particles-js4',
-
-  {
-    "particles": {
-      "number": {
-        "value": 30,
-        "density": {
-          "enable": true,
-          "value_area": 700
-        }
-      },
-      "color": {
-        "value": "#66fcf1"
-      },
-      "shape": {
-        "type": "polygon",
-        "stroke": {
-          "width": 0,
-          "color": "white"
-        },
-        "polygon": {
-          "nb_sides": 7
-        },
-        "image": {
-          "src": "img/github.svg",
-          "width": 100,
-          "height": 100
-        }
-      },
-      "opacity": {
-        "value": 1,
-        "random": false,
-        "anim": {
-          "enable": true,
-          "speed": 1,
-          "opacity_min": 0.1,
-          "sync": false
-        }
-      },
-      "size": {
-        "value": 3,
-        "random": true,
-        "anim": {
-          "enable": false,
-          "speed": 40,
-          "size_min": 0.1,
-          "sync": false
-        }
-      },
-      "line_linked": {
-        "enable": true,
-        "distance": 200,
-        "color": "#ffffff",
-        "opacity": 0.6,
-        "width": 1
-      },
-      "move": {
-        "enable": true,
-        "speed": 3,
-        "direction": "none",
-        "random": false,
-        "straight": false,
-        "out_mode": "out",
-        "attract": {
-          "enable": false,
-          "rotateX": 600,
-          "rotateY": 1200
-        }
-      }
-    },
-    "interactivity": {
-      "detect_on": "window",
-      "events": {
-        "onhover": {
-          "enable": true,
-          "mode": "repulse"
-        },
-        "onclick": {
-          "enable": true,
           "mode": "push"
         },
         "resize": true

@@ -93,6 +93,10 @@ h4 {
   color: #66fcf1;
   font-family: 'Cinzel', serif;
 }
+h5 {
+  color: #66fcf1;
+  font-family: 'Cinzel', serif;
+}
 h6 {
   color: #66fcf1;
   font-family: 'Cinzel', serif;
@@ -242,8 +246,17 @@ vertical-align: baseline;
   width: 100%;
   margin: 0 auto;
 }
-#navBar {
-  display: none;
+#navBar{
+    position: fixed;
+    top: -100px;
+    z-index: 1;
+    width: 100%;
+    -webkit-transition: top 0.5s;
+    transition: top 0.5s;
+}
+
+#navBar.fixed {
+    top: 0;
 }
 #particles-js, #particles-js2, #particles-js3, #particles-js4 {
   position: fixed;
@@ -254,6 +267,7 @@ vertical-align: baseline;
 .popover {
   background: #474b4f;
   color: #66fcf1;
+  margin-left: -1%;
 }
 #downArrowBtn {
   color: #66fcf1;
@@ -270,9 +284,9 @@ vertical-align: baseline;
 }
 #navBar {
   opacity: 0.90;
+  color: red;
 }
 #aboutMe, #contact{
-
   width: 100%;
   min-height:100vh;
   padding: 5%;

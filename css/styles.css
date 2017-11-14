@@ -3,7 +3,6 @@
 .navbar-toggler:active {
   outline: 0;
 }
-
 .navbar-toggler span {
   display: block;
   background-color: #444;
@@ -105,7 +104,7 @@ p {
 }
 canvas {
   display: block;
-  vertical-align: bottom;
+vertical-align: bottom;
 }
 .blockquote-footer {
   color: #66fcf1;
@@ -249,10 +248,12 @@ canvas {
   width: 100%;
   height: 100vh;
   background-color: #0b0c10; /* black color*/
-  background-image: url("");
-  background-repeat: no-repeat;
+  background-image: url(src="./particles/particles.js");
   background-size: cover;
   background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
 }
 .popover {
   background: #474b4f;
@@ -277,7 +278,7 @@ canvas {
 #aboutMe, #contact{
   background: none;
   width: 100%;
-  min-height: 100vh;
+  min-height:100vh;
   padding: 5%;
   background-size: cover;
 }

@@ -9,8 +9,8 @@ $(document).ready(function() {
   var scrollHeight = $(window).height();
   $(function () {
           $(window).scroll(function () {
-              // set distance user needs to scroll before we start fadeIn
-              if ($(this).scrollTop() > scrollHeight - 1 ) { //For dynamic effect use $nav.height() instead of '100'
+
+              if ($(this).scrollTop() > scrollHeight - 1 ) {
 
                   $nav.attr("display","block").fadeIn();
               } else {
@@ -44,7 +44,7 @@ $(document).ready(function() {
       event.preventDefault();
       $('html, body').stop().animate({
         scrollTop: target.offset().top
-      }, 1000);
+      }, 1300);
     }
   });
   //scroll function to hide navbar when scroll down and show when scroll  up

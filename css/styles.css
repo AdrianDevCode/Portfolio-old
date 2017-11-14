@@ -103,8 +103,10 @@ p {
   color: white;
 }
 canvas {
-  display: block;
-vertical-align: bottom;
+  width: 100%;
+  height: 100%;
+display: inline-block;
+vertical-align: baseline;
 }
 .blockquote-footer {
   color: #66fcf1;
@@ -244,16 +246,10 @@ vertical-align: bottom;
   display: none;
 }
 #particles-js, #particles-js2, #particles-js3, #particles-js4 {
-  position: absolute;
+  position: fixed;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #0b0c10; /* black color*/
-  background-image: url(src="./particles/particles.js");
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
 }
 .popover {
   background: #474b4f;
@@ -276,18 +272,17 @@ vertical-align: bottom;
   opacity: 0.90;
 }
 #aboutMe, #contact{
-  background: none;
+
   width: 100%;
   min-height:100vh;
   padding: 5%;
-  background-size: cover;
+;
 }
 #projects {
-  background: #0b0c10;
   width: 100%;
   min-height:100vh;
   padding: 5%;
-  background-size: cover;
+
 }
 #map, #form {
   height: 50vh;

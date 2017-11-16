@@ -295,13 +295,11 @@ vertical-align: baseline;
   width: 100%;
   min-height:100vh;
   padding: 5%;
-;
 }
 #projects {
   width: 100%;
   min-height:100vh;
   padding: 5%;
-
 }
 #map, #form {
   height: 50vh;
@@ -314,5 +312,4 @@ footer {
   text-align: center;
   font-family: 'Cinzel', serif;
   color: #66fcf1;
-  background: #474b4f;
 }

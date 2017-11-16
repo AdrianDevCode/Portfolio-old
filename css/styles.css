@@ -1,3 +1,5 @@
+
+
 /* ANIMATE NAVBAR X HAMBURGER START */
 .navbar-toggler:focus,
 .navbar-toggler:active {
@@ -75,9 +77,6 @@
 .arrow-bounce {
   animation: bounce 2s ease infinite;
 }
-.navIcons:hover {
-  animation: float 1s ease infinite;
-}
 h1 {
   margin-top: 30vh;
   text-align: center;
@@ -85,6 +84,7 @@ h1 {
   font-family: 'Cinzel', serif;
 }
 h3 {
+  text-align: center;
   font-family: 'Cinzel', serif;
   color: #66fcf1;
 }
@@ -118,10 +118,6 @@ vertical-align: baseline;
 .quotes {
   color: white;
 }
-.divider {
-  background: #474b4f;
-  height: 1px;
-}
 .text p {
   color: white;
   text-align: center;
@@ -134,7 +130,11 @@ vertical-align: baseline;
   min-height: 600px;
   margin: 2%;
   background: #474b4f;
-
+}
+.navIcons {
+  color: #66fcf1;
+  font-family: 'Cinzel', serif;
+  margin: 10px;
 }
 .card-img-top{
   height: 300px;
@@ -148,7 +148,7 @@ vertical-align: baseline;
   padding: 3%;
 }
 /* Wobble the project cards */
-
+@media only screen and (min-width: 768px) {
 @keyframes hvr-wobble-vertical {
   16.65% {
     -webkit-transform: translateY(20px);
@@ -175,9 +175,6 @@ vertical-align: baseline;
     transform: translateY(0);
   }
 }
-.navbar .navbar-collapse {
-    text-align: center;
-}
 #projects .card {
   display: inline-block;
   vertical-align: middle;
@@ -194,6 +191,10 @@ vertical-align: baseline;
   animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
+}
+}
+.navbar .navbar-collapse {
+    text-align: center;
 }
 /* end wobble project cards*/
 /* start contact button animation*/
@@ -254,11 +255,15 @@ vertical-align: baseline;
     -webkit-transition: top 0.5s;
     transition: top 0.5s;
 }
-
+@media only screen and (min-width: 975px) {
+  #navBar {
+    opacity: 0.85;
+  }
+}
 #navBar.fixed {
     top: 0;
 }
-#particles-js, #particles-js2, #particles-js3, #particles-js4 {
+#particles-js {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -267,7 +272,11 @@ vertical-align: baseline;
 .popover {
   background: #474b4f;
   color: #66fcf1;
-  margin-left: -1%;
+}
+@media only screen and (max-width: 975px) {
+  .popover {
+    display: none;
+  }
 }
 #downArrowBtn {
   color: #66fcf1;
@@ -281,10 +290,6 @@ vertical-align: baseline;
 }
 #downArrowBtn:hover{
   color: white;
-}
-#navBar {
-  opacity: 0.90;
-  color: red;
 }
 #aboutMe, #contact{
   width: 100%;

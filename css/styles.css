@@ -76,7 +76,7 @@
   animation: bounce 2s ease infinite;
 }
 h1 {
-  margin-top: 100px;
+  margin-top: 200px;
   text-align: center;
   color: #66fcf1; /* teal color*/
   font-family: 'Cinzel', serif;
@@ -127,7 +127,8 @@ vertical-align: baseline;
   width: 300px;
   min-height: 600px;
   margin: 2%;
-  background: #474b4f;
+  background: none;
+  border: 1px solid #66fcf1;
 }
 .navIcons {
   color: #66fcf1;
@@ -157,12 +158,12 @@ vertical-align: baseline;
   .card {
     width: 100%;
     float: left;
-    margin: 5% 0 0 0;
+    margin: 5% 0 5% 0;
     display: inline-block;
     vertical-align: middle;
   }
   .card-img-top {
-    padding-top: 5%; 
+    padding-top: 5%;
   }
 
 }

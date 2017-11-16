@@ -78,7 +78,7 @@
   animation: bounce 2s ease infinite;
 }
 h1 {
-  margin-top: 30vh;
+  margin-top: 30px;
   text-align: center;
   color: #66fcf1; /* teal color*/
   font-family: 'Cinzel', serif;
@@ -243,7 +243,7 @@ vertical-align: baseline;
 }
 /* end contact button animation*/
 #homePage {
-  height: 100vh;
+  height: 700px;
   width: 100%;
   margin: 0 auto;
 }
@@ -293,16 +293,16 @@ vertical-align: baseline;
 }
 #aboutMe, #contact{
   width: 100%;
-  min-height:100vh;
+  min-height:100px;
   padding: 5%;
 }
 #projects {
   width: 100%;
-  min-height:100vh;
+  min-height:100px;
   padding: 5%;
 }
 #map, #form {
-  height: 50vh;
+  height: 250px;
   width: 100%;
   padding: 5%;
   margin: 70px auto;

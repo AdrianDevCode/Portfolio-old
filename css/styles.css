@@ -157,13 +157,27 @@ vertical-align: baseline;
 .nav-link:hover {
   color: white;
 }
+.navbar-brand {
+  margin-top: -10px;
+  color: #66fcf1;
+  font-family: 'Cinzel', serif;
+
+}
+.navbar-brand:hover {
+  color: white;
+  animation: float 1s ease infinite;
+}
 @media screen and (max-width:900px) {
   .container-fluid {
     max-width: 100%;
     width: 100%;
 }
-.nav-link:hover {
-  background: black;
+.navbar-brand {
+  margin-top: 0;
+}
+.navbar-brand:hover {
+  color: white;
+  animation: none;
 }
   .card {
     width: 100%;

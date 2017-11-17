@@ -31,11 +31,11 @@ $(document).ready(function() {
       });
 
   if (view <= 765) {
-    $(".nav-link").attr("data-toggle", "collapse");
+    $(".toggleMobile").attr("data-toggle", "collapse");
 
   }
   else {
-    $(".nav-link").removeAttr("data-toggle", "collapse");
+    $(".toggleMobile").removeAttr("data-toggle", "collapse");
 
   }
   // if you resize window from small to bigger or vice versa, toggle navbar
@@ -43,11 +43,11 @@ $(document).ready(function() {
     view = $(window).width();
 
     if (view <= 765) {
-      $(".nav-link").attr("data-toggle", "collapse");
+      $(".toggleMobile").attr("data-toggle", "collapse");
 
     }
     else {
-      $(".nav-link").removeAttr("data-toggle", "collapse");
+      $(".toggleMobile").removeAttr("data-toggle", "collapse");
 
     }
   });
